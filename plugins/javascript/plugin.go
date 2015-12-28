@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/layeh/piepan"
+	"github.com/unascribed/piepan"
 	"github.com/robertkrimen/otto"
 	_ "github.com/robertkrimen/otto/underscore"
 )

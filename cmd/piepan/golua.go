@@ -1,5 +1,5 @@
 package main
 
 import (
-	_ "github.com/layeh/piepan/plugins/golua"
+	_ "github.com/unascribed/piepan/plugins/golua"
 )
