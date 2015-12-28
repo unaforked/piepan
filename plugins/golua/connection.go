@@ -2,7 +2,7 @@ package plugin
 
 import (
 	"github.com/layeh/gopher-luar"
-	"github.com/layeh/gumble/gumble"
+	"github.com/unascribed/gumble/gumble"
 	. "github.com/unascribed/piepan/plugins"
 	"github.com/yuin/gopher-lua"
 )

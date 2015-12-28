@@ -4,12 +4,12 @@
 
 The following section describes the API that is available for piepan JavaScript scripts.
 
-piepan is built using the [gumble](https://github.com/layeh/gumble) library. Documentation for types not part of piepan itself (including User and Channel) can be found in the [gumble documentation](https://godoc.org/github.com/layeh/gumble/gumble).
+piepan is built using the [gumble](https://github.com/unascribed/gumble) library. Documentation for types not part of piepan itself (including User and Channel) can be found in the [gumble documentation](https://godoc.org/github.com/unascribed/gumble/gumble).
 
 ### `piepan.Audio`
 
 - `void Play(object obj)`: Plays the media file `obj.filename`. `obj.callback` can be defined as a function that is called after the playback has completed.
-- [`VoiceTarget`](https://godoc.org/github.com/layeh/gumble/gumble#VoiceTarget)   `NewTarget(int id)`: Create a new voice target object.
+- [`VoiceTarget`](https://godoc.org/github.com/unascribed/gumble/gumble#VoiceTarget)   `NewTarget(int id)`: Create a new voice target object.
 - `void SetTarget(VoiceTarget target)` sets the target of subsequent `piepan.Audio.Play()` calls. Call this function with no arguments to remove any voice targeting.
 - `void Stop()`: Stops the currently playing stream.
 - `bool IsPlaying()`: Returns true if an stream is currently playing, false otherwise.
@@ -18,7 +18,7 @@ piepan is built using the [gumble](https://github.com/layeh/gumble) library. Doc
 - `float Volume()`: Returns the audio volume.
 - `void SetVolume(float volume)`: Sets the volume of transmitted audio (default: 1.0).
 
-#### [`Channels`](https://godoc.org/github.com/layeh/gumble/gumble#Channels) `piepan.Channels`
+#### [`Channels`](https://godoc.org/github.com/unascribed/gumble/gumble#Channels) `piepan.Channels`
 
 Object that contains all of the channels that are on the server. The channels are mapped by their channel IDs. `piepan.Channels[0]` is the server's root channel.
 
@@ -47,17 +47,17 @@ Disconnects from the server.
 
 Registers an event listener for a given event type. The follow events are currently supported:
 
-- `connect` (Arguments: [`ConnectEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#ConnectEvent))
+- `connect` (Arguments: [`ConnectEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#ConnectEvent))
     - Called when connection to the server has been made. This is where a script should perform its initialization.
-- `disconnect` (Arguments: [`DisconnectEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#DisconnectEvent))
+- `disconnect` (Arguments: [`DisconnectEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#DisconnectEvent))
     - Called when connection to the server has been lost or after `piepan.Disconnect()` is called.
-- `message` (Arguments: [`TextMessageEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#TextMessageEvent))
+- `message` (Arguments: [`TextMessageEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#TextMessageEvent))
     - Called when a text message is received.
-- `userChange` (Arguments: [`UserChangeEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#UserChangeEvent))
+- `userChange` (Arguments: [`UserChangeEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#UserChangeEvent))
     - Called when a user's properties changes (e.g. connects to the server).
-- `channelChange` (Arguments: [`ChannelChangeEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#ChannelChangeEvent))
+- `channelChange` (Arguments: [`ChannelChangeEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#ChannelChangeEvent))
     - Called when a channel changes state (e.g. is added or removed).
-- `permissionDenied` (Arguments: [`PermissionDeniedEvent event`](https://godoc.org/github.com/layeh/gumble/gumble#PermissionDeniedEvent))
+- `permissionDenied` (Arguments: [`PermissionDeniedEvent event`](https://godoc.org/github.com/unascribed/gumble/gumble#PermissionDeniedEvent))
     - Called when a requested action could not be performed.
 
 Note: events with a `Type` field have slight changes than what is documented in gumble:
@@ -115,7 +115,7 @@ Note: events with a `Type` field have slight changes than what is documented in 
 
 - `void Kill()`: Kills the process.
 
-#### [`User`](https://godoc.org/github.com/layeh/gumble/gumble#User) `piepan.Self`
+#### [`User`](https://godoc.org/github.com/unascribed/gumble/gumble#User) `piepan.Self`
 
 The `User` object that references yourself.
 
@@ -125,7 +125,7 @@ The `User` object that references yourself.
 
 - `void Cancel()`: Cancels the timer.
 
-#### [`Users`](https://godoc.org/github.com/layeh/gumble/gumble#Users) `piepan.Users`
+#### [`Users`](https://godoc.org/github.com/unascribed/gumble/gumble#Users) `piepan.Users`
 
 Object containing each connected user on the server, with the keys being the session ID of the user and the value being their corresponding `piepan.User` object.
 

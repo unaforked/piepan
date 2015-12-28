@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumble_ffmpeg"
-	"github.com/layeh/gumble/gumbleutil"
+	"github.com/unascribed/gumble/gumble"
+	"github.com/unascribed/gumble/gumble_ffmpeg"
+	"github.com/unascribed/gumble/gumbleutil"
 	"github.com/unascribed/piepan"
 )
 

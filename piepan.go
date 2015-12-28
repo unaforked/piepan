@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumble_ffmpeg"
+	"github.com/unascribed/gumble/gumble"
+	"github.com/unascribed/gumble/gumble_ffmpeg"
 )
 
 type Environment interface {

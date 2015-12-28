@@ -2,9 +2,9 @@ package plugin
 
 import (
 	"github.com/layeh/gopus"
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/opus"
-	"github.com/layeh/gumble/gumble_ffmpeg"
+	"github.com/unascribed/gumble/gumble"
+	"github.com/unascribed/gumble/opus"
+	"github.com/unascribed/gumble/gumble_ffmpeg"
 	"github.com/robertkrimen/otto"
 )
 
